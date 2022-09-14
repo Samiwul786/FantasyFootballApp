@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                pip install -r requirements.txt
                 python app.py
             }
         }
