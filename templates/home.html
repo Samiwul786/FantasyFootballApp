@@ -1,0 +1,39 @@
+{%  include "base.html" %}
+
+
+
+<html lang="en">
+<head>
+  <title>Fantasy Football Team Web App</title>
+</head>
+
+{%  block body %}
+
+
+    <h1 >Fantasy Football Teams Web App </h1>
+    <p> Make up your own mind on what football players you want in your Team</p>
+
+    <div class='form'>
+      <form method='POST' action=''>
+          {{ form.hidden_tag() }}
+          {{ form.team_name.label }} {{ form.team_name }}
+          <br>
+          {{ form.league_name.label }} {{ form.league_name }}
+          <br>
+          {{ form.sponsor_name.label }} {{ form.sponsor_name }}
+          <br>
+          {{ form.submit }}
+          <br>
+          {{message}}
+      </form>
+  </div>
+
+ 
+{% endblock body %}
+    
+
+
+
+
+
+

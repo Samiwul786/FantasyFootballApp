@@ -1,0 +1,26 @@
+{%  include "base.html" %}
+
+
+<html>
+<head><title>List of all Teams </title></head>
+    <body>
+        <h1 style="text-align:center">Update Team</h1>
+        
+
+            <div class='form'>
+              <form method='POST' action='/updateteam/{{team.id}}'>
+                  {{ form.hidden_tag() }}
+                  {{ form.team_name.label }} {{ form.team_name }}
+                  <br>
+                  {{ form.league_name.label }} {{ form.league_name }}
+                  <br>
+                  {{ form.sponsor_name.label }} {{ form.sponsor_name }}
+                  <br>
+                  {{ form.submit }}
+                  <br>
+                  {{message}}
+              </form>
+          </div>
+
+    </body>
+</html>

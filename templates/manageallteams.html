@@ -1,0 +1,50 @@
+{%  include "base.html" %}
+
+{%  block head %}
+
+
+
+
+{%  endblock  %}
+
+
+
+
+{%  block body %}
+<div class="content">
+    <h1>Manage all teams</h1>
+
+
+    <table>
+        <tr>
+            <th>Team Name</th>
+            <th>Team League</th>
+            <th>Team Sponsor</th>
+            <th>Actions</th>
+       </tr>
+
+
+       <!--Make a for loop to loop through the teams-->
+
+       {%  for team in all_teams %}
+       <tr>
+        <td>{{team.team_name}}</td>
+        <td>{{team.league_name}}</td>
+        <td>{{team.sponsor_name}}</td>
+        <td>
+            <a href="/delete/{{team.id}}">Delete</a>
+            <br>
+            <a href="">Update</a>
+        </td>
+       </tr>
+       {%  endfor %}
+    </table>
+
+       
+
+
+
+</div>
+
+
+{% endblock %}

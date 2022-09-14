@@ -1,0 +1,43 @@
+{%  include "base.html" %}
+
+<html>
+<head><title>List of all Players inside the team you clicked</title></head>
+    <body>
+        <h4>Here is a list of Players</h4>
+        
+          
+    
+        <table class="table">
+            <tr>
+              <th scope="col">Player Name</th>
+              <th scope="col">Player Position</th>
+              <th scope="col">Team the Player Plays For</th>
+            </tr>
+            {% for player in content %}      
+            <tr>
+              <td>{{player.player_name}}</td>
+              <td>{{player.position}}</td>
+              <td>{{player.players.team_name}}</td>
+         
+            </tr>
+            {% endfor %}
+        </table>    
+           
+
+            <h1>Create a Player</h1>
+ </head>
+
+<div class='form'>
+    <form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        {{ form.player_name.label }} {{ form.player_name }}
+        <br>
+        {{ form.position.label }} {{ form.position }}
+        <br>
+        {{ form.submit }}
+        <br>
+        {{message}}
+    </form>
+</div>
+    </body>
+</html>
