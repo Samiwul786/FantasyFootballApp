@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
 		sh python -m pytest --cov
-                sh python -m pytest --cov=test_app
+                
             }
         }
         stage('Deploy') {
