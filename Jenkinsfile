@@ -3,18 +3,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                python app.py
+              sh pip install -r requirements.txt
+              sh python app.py
             }
         }
         stage('Test') {
             steps {
-		python -m pytest --cov
-                python -m pytest --cov=test_app
+		sh python -m pytest --cov
+                sh python -m pytest --cov=test_app
             }
         }
         stage('Deploy') {
             steps {
-                //
+                
             }
         }
     }
