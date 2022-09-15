@@ -15,7 +15,7 @@ pipeline {
                sh "python3 -m pytest --cov" 
             }
         }
-	stage('Build'){
+	stage('Deploy'){
 	  steps {
              sh "python3 app.py"
 		
