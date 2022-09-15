@@ -3,8 +3,7 @@ FROM python:3.8-alpine
 
 
 
-# Copy the requirements file into the image
-COPY ./requirements.txt /app/requirements.txt
+# Copy everything into a folder called /app
 COPY . /app
 
 
