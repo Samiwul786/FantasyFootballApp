@@ -15,14 +15,10 @@ pipeline {
                sh "python3 -m pytest --cov" 
             }
         }
-	stage('Deploy'){
-	  steps {
-             sh "python3 app.py"
-		
-}
+	
 }
 }
     
-        }
+     
     
 
