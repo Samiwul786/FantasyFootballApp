@@ -3,15 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		sh "sudo su"
-		sh "apt install python3-pip"	       
+		       
                sh "pip3 install -r requirements.txt"
                sh "python3 app.py"       
             }
         }
         stage('Test') {
             steps {
-	       sh "python3 -m pytest --cov"
+	       sh "python3 test_app.py"
 
                 
             }
