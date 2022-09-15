@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-		 python -m pytest --cov
+	       python -m pytest --cov
+
                 
             }
         }
