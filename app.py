@@ -179,8 +179,11 @@ def update_team(id):
         if len(new_team_name) == 0 or len(new_league_name) == 0 or len(new_sponsor_name) == 0:
             message = "Please fill in all fields"
         else:
-            new_team = Teams(team_name=new_team_name,  league_name=new_league_name, sponsor_name=new_sponsor_name)
-            db.session.add(new_team)
+           # new_team = Teams(team_name=new_team_name,  league_name=new_league_name, sponsor_name=new_sponsor_name)
+          #  db.session.add(new_team)
+            team.team_name = new_team_name
+            team.league_name = new_league_name
+            team.sponsor_name = new_sponsor_name
             db.session.commit()
             message = f"Thank you, Your team was successfully created {new_team_name} | {new_league_name}  | {new_sponsor_name}"
             return redirect('/')
