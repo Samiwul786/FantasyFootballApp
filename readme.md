@@ -14,10 +14,7 @@ Docker was used to dockerise the flask application. This was done thorugh the us
 
 For future improvements i would beautify the application to make it more creative and more appealing to the audience
 
-Cloud VM
-20.124.106.120:5000 (flaskVM) Update functionality might not work however it is shown on the video
-20.163.230.0:5000 (swarm-master) Update functionality might not work however it is shown on the video
-20.120.94.243:5000 (swarm-worker) Update functionality might not work however it is shown on the video
+
 
 ERD Diagram link: 
 https://1drv.ms/u/s!AtYvnpKjXPBuhOgLFkRUI1u-OOuF7g?e=70ab28
